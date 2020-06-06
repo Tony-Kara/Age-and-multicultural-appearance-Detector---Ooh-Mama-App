@@ -48,7 +48,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="131.33333333333334" height="363"/>
                                                         <state key="normal" image="Pick Btn"/>
                                                         <connections>
-                                                            <action selector="imageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJf-tr-SGw"/>
+                                                            <action selector="pickBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmH-BO-Kyc"/>
                                                         </connections>
                                                     </button>
                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-6x-Tr9">
@@ -60,6 +60,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="10" maxY="0.0"/>
                                                         <state key="normal" image="Upload Btn"/>
+                                                        <connections>
+                                                            <action selector="uploadBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYU-CS-FiN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App : NSObject
+@end
+@implementation PodsDummy_Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App
+@end

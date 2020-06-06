@@ -13,6 +13,7 @@
 		04B7D8D42488FE3F00A3E9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B7D8D22488FE3F00A3E9B4 /* Main.storyboard */; };
 		04B7D8D62488FE4000A3E9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B7D8D52488FE4000A3E9B4 /* Assets.xcassets */; };
 		04B7D8D92488FE4000A3E9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B7D8D72488FE4000A3E9B4 /* LaunchScreen.storyboard */; };
+		C4D5CBD3B33650DF1DA9EC96 /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F52C0A539621FA8ADAEF83B /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		04B7D8D52488FE4000A3E9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B7D8D82488FE4000A3E9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B7D8DA2488FE4000A3E9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE0555C610107D28B83D778 /* Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig"; path = "Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig"; sourceTree = "<group>"; };
+		8F52C0A539621FA8ADAEF83B /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA614608F8313AE20F3EC82C /* Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig"; path = "Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D5CBD3B33650DF1DA9EC96 /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				04B7D8CB2488FE3F00A3E9B4 /* Age and multicultural appearance Detector - Ooh Mama App */,
 				04B7D8CA2488FE3F00A3E9B4 /* Products */,
+				10AA8335B7952FB76E9C2251 /* Pods */,
+				1D03CC8A5552621AD6C90E07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		10AA8335B7952FB76E9C2251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA614608F8313AE20F3EC82C /* Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig */,
+				3BE0555C610107D28B83D778 /* Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1D03CC8A5552621AD6C90E07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F52C0A539621FA8ADAEF83B /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04B7D8DD2488FE4000A3E9B4 /* Build configuration list for PBXNativeTarget "Age and multicultural appearance Detector - Ooh Mama App" */;
 			buildPhases = (
+				339653F9EF82C2B4680C7D6F /* [CP] Check Pods Manifest.lock */,
 				04B7D8C52488FE3F00A3E9B4 /* Sources */,
 				04B7D8C62488FE3F00A3E9B4 /* Frameworks */,
 				04B7D8C72488FE3F00A3E9B4 /* Resources */,
+				5716D40F0AF184633F8EC700 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		339653F9EF82C2B4680C7D6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Age and multicultural appearance Detector - Ooh Mama App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5716D40F0AF184633F8EC700 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04B7D8C52488FE3F00A3E9B4 /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		04B7D8DE2488FE4000A3E9B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA614608F8313AE20F3EC82C /* Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +378,7 @@
 		};
 		04B7D8DF2488FE4000A3E9B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE0555C610107D28B83D778 /* Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App {
+  umbrella header "Pods-Age and multicultural appearance Detector - Ooh Mama App-umbrella.h"
+
+  export *
+  module * { export * }
+}
