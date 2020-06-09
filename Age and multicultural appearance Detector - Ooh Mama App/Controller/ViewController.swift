@@ -40,9 +40,8 @@ var config = YPImagePickerConfiguration()
     override func viewWillLayoutSubviews() {
         imageView1.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 6)
     }
-    @IBOutlet weak var UploadBtn: UIButton!
+  
     
-    @IBOutlet weak var pickBtn: UIButton!
     
     @IBOutlet weak var imageView1: UIImageView!
        
@@ -66,6 +65,14 @@ var config = YPImagePickerConfiguration()
     }
     
     @IBAction func uploadBtnAction(_ sender: UIButton) {
+        NetworkServices.instance.getGender(image: imageView1.image!) { (gender) in
+            print(gender)
+        }
+    
+        NetworkServices.instance.getAge(image: imageView1.image!) { (Age) in
+            print(Age)
+        }
+        
     }
     
      

@@ -66,6 +66,13 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-A9-Rj2">
+                                                <rect key="frame" x="91" y="0.0" width="212" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="tLB-3W-Dw3" firstAttribute="centerX" secondItem="9XC-6w-vtL" secondAttribute="centerX" id="24c-qf-CmC"/>
@@ -93,10 +100,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="UploadBtn" destination="nkn-FT-WE9" id="W0U-jj-ipH"/>
                         <outlet property="imageView1" destination="R7b-rh-u5i" id="QZe-KU-qsD"/>
                         <outlet property="imgContainer" destination="No7-3i-laP" id="ihk-27-WlU"/>
-                        <outlet property="pickBtn" destination="35H-y8-h00" id="zZc-Qc-dRK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
