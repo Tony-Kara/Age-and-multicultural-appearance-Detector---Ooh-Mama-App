@@ -16,6 +16,7 @@
 		04F75694248C535E00F9105F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F75693248C535E00F9105F /* Media.swift */; };
 		04F75697248EA82B00F9105F /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F75696248EA82B00F9105F /* NetworkServices.swift */; };
 		04F75699248EA88400F9105F /* ClarifaiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F75698248EA88400F9105F /* ClarifaiModel.swift */; };
+		04F7569B2490216600F9105F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7569A2490216600F9105F /* SecondViewController.swift */; };
 		C4D5CBD3B33650DF1DA9EC96 /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F52C0A539621FA8ADAEF83B /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		04F75693248C535E00F9105F /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		04F75696248EA82B00F9105F /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		04F75698248EA88400F9105F /* ClarifaiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarifaiModel.swift; sourceTree = "<group>"; };
+		04F7569A2490216600F9105F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3BE0555C610107D28B83D778 /* Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig"; path = "Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App.release.xcconfig"; sourceTree = "<group>"; };
 		8F52C0A539621FA8ADAEF83B /* Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Age_and_multicultural_appearance_Detector___Ooh_Mama_App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA614608F8313AE20F3EC82C /* Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig"; path = "Target Support Files/Pods-Age and multicultural appearance Detector - Ooh Mama App/Pods-Age and multicultural appearance Detector - Ooh Mama App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				04B7D8D02488FE3F00A3E9B4 /* ViewController.swift */,
+				04F7569A2490216600F9105F /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				04F75697248EA82B00F9105F /* NetworkServices.swift in Sources */,
 				04B7D8D12488FE3F00A3E9B4 /* ViewController.swift in Sources */,
 				04B7D8CD2488FE3F00A3E9B4 /* AppDelegate.swift in Sources */,
+				04F7569B2490216600F9105F /* SecondViewController.swift in Sources */,
 				04F75694248C535E00F9105F /* Media.swift in Sources */,
 				04B7D8CF2488FE3F00A3E9B4 /* SceneDelegate.swift in Sources */,
 			);

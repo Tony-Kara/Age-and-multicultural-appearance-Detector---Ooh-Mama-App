@@ -34,15 +34,21 @@ var config = YPImagePickerConfiguration()
         // config.filters = [DefaultYPFilters...]
          config.maxCameraZoomFactor = 1.0
       
-        
+        textOnUploadPicture.isHidden = false
         
     }
+    
+    var Gender = ""
+    var Age = 0
+    var image1: UIImage?
+    
     override func viewWillLayoutSubviews() {
         imageView1.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 6)
     }
   
     
     
+    @IBOutlet weak var textOnUploadPicture: UILabel!
     @IBOutlet weak var imageView1: UIImageView!
        
     @IBOutlet weak var imgContainer: UIView!
@@ -55,7 +61,8 @@ var config = YPImagePickerConfiguration()
                if let photo = items.singlePhoto {
                    self.imageView1.contentMode = .scaleToFill
                    self.imageView1.image = photo.originalImage
-                   
+                   self.image1 = photo.originalImage
+                    self.textOnUploadPicture.isHidden = true
               
                }
                picker.dismiss(animated: true, completion: nil)
@@ -66,16 +73,24 @@ var config = YPImagePickerConfiguration()
     
     @IBAction func uploadBtnAction(_ sender: UIButton) {
         NetworkServices.instance.getGender(image: imageView1.image!) { (gender) in
-            print(gender)
+            self.Gender = gender
         }
     
-        NetworkServices.instance.getAge(image: imageView1.image!) { (Age) in
-            print(Age)
+        NetworkServices.instance.getAge(image: imageView1.image!) { (age) in
+            self.Age = age
         }
+        
+        performSegue(withIdentifier: "updates", sender: self)
+        
         
     }
     
-     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "updates" {
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.userImage = image1
+        }
+    }
        
   
        
