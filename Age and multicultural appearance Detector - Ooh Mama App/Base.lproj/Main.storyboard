@@ -70,9 +70,9 @@
                                                             <action selector="pickBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmH-BO-Kyc"/>
                                                         </connections>
                                                     </button>
-                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-6x-Tr9">
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-6x-Tr9">
                                                         <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="341"/>
-                                                        <color key="color" red="1" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="color" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </activityIndicatorView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-FT-WE9">
                                                         <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="341"/>
@@ -113,6 +113,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ooh Mama" id="HLb-si-10K"/>
                     <connections>
+                        <outlet property="actInd" destination="qqU-6x-Tr9" id="UTZ-ic-P6C"/>
                         <outlet property="imageView1" destination="R7b-rh-u5i" id="QZe-KU-qsD"/>
                         <outlet property="imgContainer" destination="No7-3i-laP" id="ihk-27-WlU"/>
                         <outlet property="textOnUploadPicture" destination="ywY-A9-Rj2" id="5al-9r-wa1"/>
@@ -131,26 +132,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poly1" translatesAutoresizingMaskIntoConstraints="NO" id="rKi-VE-BlN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rz4-xx-lj7">
                                 <rect key="frame" x="0.0" y="94" width="414" height="548"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWx-9J-Ww1">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="goi-sv-uCA">
-                                                <rect key="frame" x="69" y="46" width="276" height="373"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goi-sv-uCA">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="goi-sv-uCA" firstAttribute="centerX" secondItem="zWx-9J-Ww1" secondAttribute="centerX" id="J2D-jA-p50"/>
+                                            <constraint firstAttribute="bottom" secondItem="goi-sv-uCA" secondAttribute="bottom" id="Xfo-j2-Rv0"/>
+                                            <constraint firstItem="goi-sv-uCA" firstAttribute="top" secondItem="zWx-9J-Ww1" secondAttribute="top" id="Xim-xU-30z"/>
+                                            <constraint firstItem="goi-sv-uCA" firstAttribute="centerY" secondItem="zWx-9J-Ww1" secondAttribute="centerY" id="bpq-an-6yf"/>
+                                            <constraint firstAttribute="trailing" secondItem="goi-sv-uCA" secondAttribute="trailing" id="lo9-gk-VyN"/>
+                                            <constraint firstItem="goi-sv-uCA" firstAttribute="leading" secondItem="zWx-9J-Ww1" secondAttribute="leading" id="wal-0m-TGR"/>
+                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="185" translatesAutoresizingMaskIntoConstraints="NO" id="YN2-vl-bnf" userLabel="Middle Stack View">
-                                        <rect key="frame" x="0.0" y="480" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="478" width="414" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender::::" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv9-c1-rus" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv9-c1-rus" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="charInterval">
@@ -160,19 +172,21 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DZ-CD-Ebi">
                                                 <rect key="frame" x="299.66666666666669" y="0.0" width="114.33333333333331" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="186" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-8Z-uDV" userLabel="Buttom Stack View">
-                                        <rect key="frame" x="0.0" y="500" width="414" height="48"/>
+                                        <rect key="frame" x="0.0" y="498" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age::::" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWh-v6-TTw" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="114" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWh-v6-TTw" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="50"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="charInterval">
@@ -180,10 +194,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Io-oqY">
-                                                <rect key="frame" x="300" y="0.0" width="114" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-Io-oqY">
+                                                <rect key="frame" x="300" y="0.0" width="114" height="50"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -193,9 +208,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rKi-VE-BlN" secondAttribute="trailing" id="3Jc-E1-53u"/>
                             <constraint firstItem="Rz4-xx-lj7" firstAttribute="top" secondItem="5Gl-1z-nzg" secondAttribute="top" constant="50" id="8Pl-Uu-gkv"/>
                             <constraint firstItem="5Gl-1z-nzg" firstAttribute="trailing" secondItem="Rz4-xx-lj7" secondAttribute="trailing" id="EM2-0J-Gze"/>
+                            <constraint firstItem="rKi-VE-BlN" firstAttribute="leading" secondItem="qEO-vn-tEy" secondAttribute="leading" id="FiC-fh-fOL"/>
                             <constraint firstItem="Rz4-xx-lj7" firstAttribute="centerY" secondItem="qEO-vn-tEy" secondAttribute="centerY" id="gp8-cj-T7j"/>
+                            <constraint firstItem="rKi-VE-BlN" firstAttribute="top" secondItem="qEO-vn-tEy" secondAttribute="top" id="jyZ-Kh-LJz"/>
+                            <constraint firstAttribute="bottom" secondItem="rKi-VE-BlN" secondAttribute="bottom" id="m68-WK-NHG"/>
                             <constraint firstItem="Rz4-xx-lj7" firstAttribute="leading" secondItem="5Gl-1z-nzg" secondAttribute="leading" id="s8p-Yc-vZe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Gl-1z-nzg"/>
@@ -222,6 +241,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Br-br-zun">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -238,5 +258,6 @@
         <image name="Pick Btn" width="408" height="369"/>
         <image name="Upload Btn" width="408" height="369"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="poly1" width="3000" height="2400"/>
     </resources>
 </document>

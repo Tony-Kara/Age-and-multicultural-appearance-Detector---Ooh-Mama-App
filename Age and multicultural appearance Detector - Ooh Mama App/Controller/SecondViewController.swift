@@ -25,12 +25,9 @@ class SecondViewController: UIViewController {
         imageView2.image = userImage
         genderlabel.text = "Gender:"
         ageLabel.text = "Age:"
-        print(ageFromUser!) // fatal error here
-        print(genderFromUser!) // fatal error here
        
-        
-          ageUser.text = ageFromUserInString()
-          genderUser.text = genderFromUser
+        ageUser.text = ageFromUserInString()
+        genderUser.text = genderFromUser
         
         
         
@@ -38,7 +35,7 @@ class SecondViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        imageView2.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 6)
+        imageView2.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 9)
     }
     
     @IBOutlet weak var imgContainer: UIView!
