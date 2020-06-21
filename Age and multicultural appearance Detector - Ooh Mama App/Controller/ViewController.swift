@@ -38,9 +38,14 @@ var config = YPImagePickerConfiguration()
         
     }
     
-    var Gender = ""
-    var Age = 0
+   // var uservalues: UserValues?
+    
     var image1: UIImage?
+    var Gender: String?
+    var Age: Int?
+    
+    //let queue = DispatchQueue(label: "tony", attributes: .concurrent)
+    let dispatchGroup = DispatchGroup()
     
     override func viewWillLayoutSubviews() {
         imageView1.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 6)
@@ -72,15 +77,25 @@ var config = YPImagePickerConfiguration()
     }
     
     @IBAction func uploadBtnAction(_ sender: UIButton) {
-        NetworkServices.instance.getGender(image: imageView1.image!) { (gender) in
-            self.Gender = gender
-        }
+        
+       
+        
+        
+           
+        dispatchGroup.enter()
+        dispatchGroup.enter()
+        checkFofGender(in: dispatchGroup)
+        checkForAge(in: dispatchGroup)
+        
+
     
-        NetworkServices.instance.getAge(image: imageView1.image!) { (age) in
-            self.Age = age
+    
+        dispatchGroup.notify(queue: .main){
+
+            self.performSegue(withIdentifier: "updates", sender: self)
         }
         
-        performSegue(withIdentifier: "updates", sender: self)
+        
         
         
     }
@@ -89,14 +104,34 @@ var config = YPImagePickerConfiguration()
         if segue.identifier == "updates" {
             let destinationVC = segue.destination as! SecondViewController
             destinationVC.userImage = image1
+            destinationVC.genderFromUser = Gender
+            destinationVC.ageFromUser = Age
         }
     }
        
   
+    func checkFofGender(in myGroup: DispatchGroup) {
+
+             NetworkServices.instance.getGender(image: imageView1.image!) { (gender) in
+
+                                           self.Gender = gender
+                myGroup.leave()
+                                       }
+
+    }
        
-       
-       
-     
+   
+    
+    
+     func checkForAge(in myGroup: DispatchGroup) {
+
+              NetworkServices.instance.getAge(image: self.imageView1.image!) { (age) in
+                  self.Age = age
+
+                myGroup.leave()
+              }
+
+     }
        
       
       

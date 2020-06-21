@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044722FD24929C5F000DD892 /* UserValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044722FC24929C5F000DD892 /* UserValues.swift */; };
 		04B7D8CD2488FE3F00A3E9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7D8CC2488FE3F00A3E9B4 /* AppDelegate.swift */; };
 		04B7D8CF2488FE3F00A3E9B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7D8CE2488FE3F00A3E9B4 /* SceneDelegate.swift */; };
 		04B7D8D12488FE3F00A3E9B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7D8D02488FE3F00A3E9B4 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044722FC24929C5F000DD892 /* UserValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValues.swift; sourceTree = "<group>"; };
 		04B7D8C92488FE3F00A3E9B4 /* Age and multicultural appearance Detector - Ooh Mama App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Age and multicultural appearance Detector - Ooh Mama App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B7D8CC2488FE3F00A3E9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B7D8CE2488FE3F00A3E9B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				04F75693248C535E00F9105F /* Media.swift */,
+				044722FC24929C5F000DD892 /* UserValues.swift */,
 				04F75698248EA88400F9105F /* ClarifaiModel.swift */,
 			);
 			path = Model;
@@ -236,6 +239,7 @@
 			files = (
 				04F75699248EA88400F9105F /* ClarifaiModel.swift in Sources */,
 				04F75697248EA82B00F9105F /* NetworkServices.swift in Sources */,
+				044722FD24929C5F000DD892 /* UserValues.swift in Sources */,
 				04B7D8D12488FE3F00A3E9B4 /* ViewController.swift in Sources */,
 				04B7D8CD2488FE3F00A3E9B4 /* AppDelegate.swift in Sources */,
 				04F7569B2490216600F9105F /* SecondViewController.swift in Sources */,

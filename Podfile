@@ -7,4 +7,5 @@ target 'Age and multicultural appearance Detector - Ooh Mama App' do
 
   # Pods for Age and multicultural appearance Detector - Ooh Mama App
 	pod 'YPImagePicker'
+	pod 'CLTypingLabel'
 end
