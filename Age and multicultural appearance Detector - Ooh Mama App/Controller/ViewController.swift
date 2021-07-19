@@ -90,8 +90,12 @@ class ViewController: UIViewController {
     
     @IBAction func uploadBtnAction(_ sender: UIButton) {
     
-        let imageOfUser = UIImage(named: "\(imageView1.image!)")
-        if  imageOfUser != nil{
+        let imageOfUser = UIImage(systemName: "person.circle")
+        if  imageOfUser == imageView1.image{
+            textOnUploadPicture.text = "Click on the Pick button!"
+        }
+        
+        else {
         actInd.startAnimating()
         dispatchGroup.enter()
         dispatchGroup.enter()
@@ -105,7 +109,7 @@ class ViewController: UIViewController {
         }
         }
         
-        else{textOnUploadPicture.text = "Click on the Pick button!"}
+        
         
         
        
