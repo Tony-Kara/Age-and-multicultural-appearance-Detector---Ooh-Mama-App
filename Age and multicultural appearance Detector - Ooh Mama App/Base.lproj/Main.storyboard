@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJi-bq-9mx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qJi-bq-9mx">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +33,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-Be-6Fw">
                                                 <rect key="frame" x="71.666666666666686" y="143.66666666666666" width="271" height="54"/>
                                                 <subviews>
-                                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo should face Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-A9-Rj2">
-                                                        <rect key="frame" x="20" y="15" width="231" height="24"/>
+                                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face Picture Only!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-A9-Rj2">
+                                                        <rect key="frame" x="55.333333333333314" y="15" width="160" height="24"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -72,7 +74,7 @@
                                                     </button>
                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-6x-Tr9">
                                                         <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="341"/>
-                                                        <color key="color" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="color" systemColor="systemYellowColor"/>
                                                     </activityIndicatorView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-FT-WE9">
                                                         <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="341"/>
@@ -98,7 +100,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YOp-Ky-jJb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="9rl-8R-iwm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aep-5q-zQh" secondAttribute="bottom" id="Kef-fm-wBc"/>
@@ -109,7 +112,6 @@
                             <constraint firstItem="aep-5q-zQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ckz-IL-Zfa"/>
                             <constraint firstAttribute="bottom" secondItem="YOp-Ky-jJb" secondAttribute="bottom" id="iJq-Vh-71m"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ooh Mama" id="HLb-si-10K"/>
                     <connections>
@@ -145,7 +147,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="458"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="goi-sv-uCA" firstAttribute="centerX" secondItem="zWx-9J-Ww1" secondAttribute="centerX" id="J2D-jA-p50"/>
                                             <constraint firstAttribute="bottom" secondItem="goi-sv-uCA" secondAttribute="bottom" id="Xfo-j2-Rv0"/>
@@ -206,7 +208,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5Gl-1z-nzg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rKi-VE-BlN" secondAttribute="trailing" id="3Jc-E1-53u"/>
                             <constraint firstItem="Rz4-xx-lj7" firstAttribute="top" secondItem="5Gl-1z-nzg" secondAttribute="top" constant="50" id="8Pl-Uu-gkv"/>
@@ -217,7 +220,6 @@
                             <constraint firstAttribute="bottom" secondItem="rKi-VE-BlN" secondAttribute="bottom" id="m68-WK-NHG"/>
                             <constraint firstItem="Rz4-xx-lj7" firstAttribute="leading" secondItem="5Gl-1z-nzg" secondAttribute="leading" id="s8p-Yc-vZe"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5Gl-1z-nzg"/>
                     </view>
                     <navigationItem key="navigationItem" id="fxp-E8-a30"/>
                     <connections>
@@ -241,7 +243,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Br-br-zun">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -253,11 +262,24 @@
             <point key="canvasLocation" x="-27.536231884057973" y="68.478260869565219"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="LWh-v6-TTw"/>
+        <designable name="dv9-c1-rus"/>
+    </designables>
     <resources>
         <image name="Background image-1" width="2400" height="3000"/>
         <image name="Pick Btn" width="408" height="369"/>
         <image name="Upload Btn" width="408" height="369"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="poly1" width="3000" height="2400"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

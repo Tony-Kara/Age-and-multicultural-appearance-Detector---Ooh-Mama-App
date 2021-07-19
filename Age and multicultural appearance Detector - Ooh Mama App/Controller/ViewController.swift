@@ -11,6 +11,15 @@ import YPImagePicker
 
 class ViewController: UIViewController {
     var config = YPImagePickerConfiguration()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -103,15 +112,16 @@ class ViewController: UIViewController {
     
     func checkFofGender(in myGroup: DispatchGroup) {
         
-        NetworkServices.instance.getGender(image: imageView1.image!) { (gender) in
-            
+        NetworkServices.instance.getGender(image: imageView1.image!) { [weak self] (gender) in
+            guard let self = self else { return }
             self.Gender = gender
             myGroup.leave()
         }
     }
     func checkForAge(in myGroup: DispatchGroup) {
         
-        NetworkServices.instance.getAge(image: self.imageView1.image!) { (age) in
+        NetworkServices.instance.getAge(image: self.imageView1.image!) { [weak self]  (age) in
+            guard let self = self else { return }
             self.Age = age
             
             myGroup.leave()
