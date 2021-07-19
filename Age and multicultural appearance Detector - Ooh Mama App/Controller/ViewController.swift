@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     
     //let queue = DispatchQueue(label: "tony", attributes: .concurrent)
     let dispatchGroup = DispatchGroup()
+   
     
     override func viewWillLayoutSubviews() {
         imageView1.applyshadowWithCorner(containerView: imgContainer, cornerRadius: 6)
@@ -71,8 +72,7 @@ class ViewController: UIViewController {
     
     @IBAction func pickBtnAction(_ sender: UIButton) {
         
-        
-        let picker = YPImagePicker(configuration: config)
+       let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { [unowned picker] items, _ in
             if let photo = items.singlePhoto {
                 self.imageView1.contentMode = .scaleToFill
@@ -83,10 +83,15 @@ class ViewController: UIViewController {
             }
             picker.dismiss(animated: true, completion: nil)
         }
-        present(picker, animated: true, completion: nil)
+            present(picker, animated: true, completion: nil)
+        
+       
     }
     
     @IBAction func uploadBtnAction(_ sender: UIButton) {
+    
+        let imageOfUser = UIImage(named: "\(imageView1.image!)")
+        if  imageOfUser != nil{
         actInd.startAnimating()
         dispatchGroup.enter()
         dispatchGroup.enter()
@@ -98,6 +103,12 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "updates", sender: self)
             
         }
+        }
+        
+        else{textOnUploadPicture.text = "Click on the Pick button!"}
+        
+        
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
