@@ -154,6 +154,51 @@ static let instance = NetworkServices()
     }
     
     
+    //MARK: - Function to get Mama Advice
+    
+    
+    func getAdvice(completion:@escaping(String) -> ()) {
+        
+        
+        let randomFactEndpoint = URL(string: "https://api.quotable.io/random")
+        guard let url = randomFactEndpoint else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse , response.statusCode == 200 else{
+                debugPrint("Server error")
+                return
+            }
+            
+            guard let data = data else{return}
+            
+            do{
+              
+               guard let json = try JSONSerialization.jsonObject(with: data, options:
+                                        // we treat the data as a dictionary which means we will filter through out result using key-value pair
+                 [.allowFragments]) as? [String:Any] else{return}
+               let advice = json["content"] as? String ?? ""
+                DispatchQueue.main.async {
+                   completion(advice)
+                }
+               
+             
+              }catch{
+                  debugPrint("Error returning data for images")
+              }
+       
+        }
+        task.resume()
+    }
+    
+    
+    
+    
     //MARK: - Function to be used in future
     func getRace(imgUrl: UIImage, completion: @escaping ([ClarifaiModel]) -> ()) {
         
